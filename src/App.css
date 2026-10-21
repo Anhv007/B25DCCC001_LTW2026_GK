@@ -6,3 +6,5 @@ table { border-collapse: collapse; width: 100%; }
 th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
 tbody tr:hover { background-color: #f0f0f0; }
 button { margin-right: 5px; }
+.form-row { margin-bottom: 10px; }
+.form-row label { display: inline-block; width: 140px; }
