@@ -8,3 +8,6 @@ tbody tr:hover { background-color: #f0f0f0; }
 button { margin-right: 5px; }
 .form-row { margin-bottom: 10px; }
 .form-row label { display: inline-block; width: 140px; }
+.filter-bar { margin-bottom: 10px; }
+.filter-bar label { margin-right: 6px; }
+.filter-bar input, .filter-bar select { margin-right: 15px; }
