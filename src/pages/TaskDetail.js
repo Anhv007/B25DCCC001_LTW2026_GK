@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
+import WorkTimer from '../components/WorkTimer';
 
 const TaskDetail = ({ tasks }) => {
   const { id } = useParams();
