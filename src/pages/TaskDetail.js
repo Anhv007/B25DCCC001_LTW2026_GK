@@ -1,2 +1,32 @@
-const TaskDetail = () => <h2>Chi tiết</h2>;
+import { useParams, useNavigate } from 'react-router-dom';
+
+const TaskDetail = ({ tasks }) => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const task = tasks.find((t) => t.id === Number(id));
+
+  if (!task) {
+    return (
+      <div>
+        <p>Không tìm thấy công việc</p>
+        <button onClick={() => navigate(-1)}>Quay lại</button>
+      </div>
+    );
+  }
+
+  const { title, assignee, priority, hours, done } = task;
+
+  return (
+    <div>
+      <h2>Chi tiết</h2>
+      <p>{`Tên công việc: ${title}`}</p>
+      <p>{`Người làm: ${assignee}`}</p>
+      <p>{`Mức ưu tiên: ${priority}`}</p>
+      <p>{`Số giờ: ${hours}`}</p>
+      <p>{`Trạng thái: ${done ? 'Đã xong' : 'Đang làm'}`}</p>
+      <button onClick={() => navigate(-1)}>Quay lại</button>
+    </div>
+  );
+};
+
 export default TaskDetail;
